@@ -1,0 +1,68 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>de.uni-hd.hra</groupId>
+	<artifactId>sarit-transliteration-exist-module</artifactId>
+	<version>0.0.1</version>
+	<url>http://sarit.indology.info</url>
+
+	<prerequisites>
+		<maven>${maven-version}</maven>
+	</prerequisites>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<java-version>1.8</java-version>
+		<maven-version>3.3.3</maven-version>
+		<sanskritlibrary-lib-path>${basedir}/lib/SanskritLibrary.jar</sanskritlibrary-lib-path>
+		<package-title>EXPath Lucene Transcoding analyzer</package-title>
+		<package-name>http://hra.uni-heidelberg.de/ns/sarit/${project.artifactId}</package-name>
+		<package-abbrev>expath-${project.artifactId}-exist-lib</package-abbrev>
+		<package-type>application</package-type>
+		<package-final-name>expath-${project.artifactId}-exist-lib-${project.version}</package-final-name>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.sanskritlibrary</groupId>
+			<artifactId>sl</artifactId>
+			<version>0.1</version>
+		</dependency>
+		<dependency>
+			<groupId>de.uni-hd.hra</groupId>
+			<artifactId>lucene-transcoding-analyzer</artifactId>
+			<version>0.1.3</version>
+		</dependency>
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>1.2.17</version>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>ro.kuberam.maven.plugins</groupId>
+				<artifactId>kuberam-expath-plugin</artifactId>
+				<version>0.4.4</version>
+				<executions>
+					<execution>
+						<id>create-xar</id>
+						<phase>package</phase>
+						<goals>
+							<goal>make-xar</goal>
+						</goals>
+						<configuration>
+							<descriptor>build/assembly.xml</descriptor>
+							<finalName>${package-final-name}</finalName>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>
