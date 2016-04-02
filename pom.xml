@@ -53,27 +53,4 @@
 		</dependency>
 	</dependencies>
 
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>ro.kuberam.maven.plugins</groupId>
-				<artifactId>kuberam-expath-plugin</artifactId>
-				<version>0.4.4</version>
-				<executions>
-					<execution>
-						<id>create-xar</id>
-						<phase>package</phase>
-						<goals>
-							<goal>make-xar</goal>
-						</goals>
-						<configuration>
-							<descriptor>build/assembly.xml</descriptor>
-							<finalName>${package-final-name}</finalName>
-						</configuration>
-					</execution>
-				</executions>
-			</plugin>
-		</plugins>
-	</build>
-
 </project>
