@@ -5,7 +5,7 @@
 
 	<groupId>de.uni-hd.hra</groupId>
 	<artifactId>sarit-transliteration-exist-module</artifactId>
-	<version>0.0.1</version>
+	<version>0.0.2</version>
 	<url>http://sarit.indology.info</url>
 
 	<prerequisites>
@@ -16,11 +16,6 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<java-version>1.8</java-version>
 		<maven-version>3.3.3</maven-version>
-		<package-title>EXPath Lucene Transcoding analyzer</package-title>
-		<package-name>http://hra.uni-heidelberg.de/ns/sarit/${project.artifactId}</package-name>
-		<package-abbrev>expath-${project.artifactId}-exist-lib</package-abbrev>
-		<package-type>application</package-type>
-		<package-final-name>expath-${project.artifactId}-exist-lib-${project.version}</package-final-name>
 	</properties>
 
 	<repositories>
