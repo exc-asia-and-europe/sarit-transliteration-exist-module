@@ -23,6 +23,8 @@ public class ExistTransliterationModule extends AbstractInternalModule {
 		try {
 			TransformMaps.transformMaps.put("deva2slp1", new TransformMap("*:deva->slp1", ris, TransformMaps.fsmh));
 			TransformMaps.transformMaps.put("roman2slp1", new TransformMap("*:roman->slp1", ris, TransformMaps.fsmh));
+			TransformMaps.transformMaps.put("slp12deva", new TransformMap("*:slp1->deva", ris, TransformMaps.fsmh));
+			TransformMaps.transformMaps.put("slp12roman", new TransformMap("*:slp1->roman", ris, TransformMaps.fsmh));
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
