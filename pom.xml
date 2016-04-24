@@ -5,7 +5,7 @@
 
 	<groupId>de.uni-hd.hra</groupId>
 	<artifactId>sarit-transliteration-exist-module</artifactId>
-	<version>0.0.2</version>
+	<version>0.0.3</version>
 	<url>http://sarit.indology.info</url>
 
 	<prerequisites>
@@ -47,5 +47,27 @@
 			<version>1.2.17</version>
 		</dependency>
 	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<configuration>
+					<archive>
+						<manifest>
+							<mainClass>de.unihd.hra.libs.java.sarit.ExistTransliterationModule</mainClass>
+							<packageName>de.unihd.hra.libs.java.sarit</packageName>
+						</manifest>
+						<manifestEntries>
+							<ModuleNamespace>http://hra.uni-heidelberg.de/ns/sarit-transliteration</ModuleNamespace>
+						</manifestEntries>
+					</archive>
+					<encoding>UTF-8</encoding>
+<!-- 					<finalName>expath-${module-prefix}-exist-lib</finalName> -->
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
 
 </project>

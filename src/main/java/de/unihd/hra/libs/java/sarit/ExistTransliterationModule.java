@@ -16,7 +16,7 @@ import de.unihd.hra.libs.java.luceneTranscodingAnalyzer.TransformMaps;
  * @author Claudius Teodorescu <claudius.teodorescu@gmail.com>
  */
 public class ExistTransliterationModule extends AbstractInternalModule {
-	
+
 	static {
 		ResourceInputStream ris = new TransformMaps.Transcoders();
 
@@ -28,15 +28,17 @@ public class ExistTransliterationModule extends AbstractInternalModule {
 		}
 	}
 
-	public ExistTransliterationModule(Map<String, List<? extends Object>> parameters) {
-		super(functions, parameters);
-	}
+	public static String NAMESPACE_URI = "http://hra.uni-heidelberg.de/ns/sarit-transliteration";
+	public static String PREFIX = "sarit";
+	public final static String INCLUSION_DATE = "2016-04-23";
+	public final static String RELEASED_IN_VERSION = "eXist-1.5";
 
 	private final static FunctionDef[] functions = {
 			new FunctionDef(TransliterateFunction.signature, TransliterateFunction.class) };
 
-	public static String NAMESPACE_URI = "http://hra.uni-heidelberg.de/ns/sarit-transliteration-exist-module";
-	public static String PREFIX = "sarit";
+	public ExistTransliterationModule(Map<String, List<? extends Object>> parameters) {
+		super(functions, parameters);
+	}
 
 	@Override
 	public String getDefaultPrefix() {
@@ -55,8 +57,7 @@ public class ExistTransliterationModule extends AbstractInternalModule {
 
 	@Override
 	public String getReleaseVersion() {
-		// TODO Auto-generated method stub
-		return null;
+		return RELEASED_IN_VERSION;
 	}
 
 }

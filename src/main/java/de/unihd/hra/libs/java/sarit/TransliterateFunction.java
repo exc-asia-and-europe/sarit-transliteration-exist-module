@@ -29,7 +29,7 @@ import de.unihd.hra.libs.java.luceneTranscodingAnalyzer.TransformMaps;
 public class TransliterateFunction extends BasicFunction {
 
 	private static final Logger log = Logger.getLogger(TransliterateFunction.class);
-	private final HashMap<String, TransformMap> transformMaps;
+	private final HashMap<String, TransformMap> transformMaps = TransformMaps.transformMaps;
 
 	public final static FunctionSignature signature = new FunctionSignature(
 			new QName("transliterate", ExistTransliterationModule.NAMESPACE_URI, ExistTransliterationModule.PREFIX),
@@ -43,9 +43,9 @@ public class TransliterateFunction extends BasicFunction {
 							"The target script.") },
 			new FunctionReturnSequenceType(Type.STRING, Cardinality.EXACTLY_ONE, "The transliterated string."));
 
-	public TransliterateFunction(XQueryContext context, FunctionSignature signature) {
+	public TransliterateFunction(XQueryContext context) {
 		super(context, signature);
-		this.transformMaps = TransformMaps.transformMaps;
+//		this.transformMaps = TransformMaps.transformMaps;
 	}
 
 	@Override
