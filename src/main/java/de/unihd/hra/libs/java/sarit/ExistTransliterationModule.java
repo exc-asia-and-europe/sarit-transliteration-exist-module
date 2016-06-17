@@ -36,7 +36,8 @@ public class ExistTransliterationModule extends AbstractInternalModule {
 	public final static String RELEASED_IN_VERSION = "eXist-1.5";
 
 	private final static FunctionDef[] functions = {
-			new FunctionDef(TransliterateFunction.signature, TransliterateFunction.class) };
+			new FunctionDef(TransliterateFunction.signature, TransliterateFunction.class),
+			new FunctionDef(TranscodeFunction.signature, TranscodeFunction.class) };
 
 	public ExistTransliterationModule(Map<String, List<? extends Object>> parameters) {
 		super(functions, parameters);
