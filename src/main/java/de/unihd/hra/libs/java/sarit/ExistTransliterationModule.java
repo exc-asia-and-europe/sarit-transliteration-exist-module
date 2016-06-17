@@ -31,7 +31,7 @@ public class ExistTransliterationModule extends AbstractInternalModule {
 	}
 
 	public static String NAMESPACE_URI = "http://hra.uni-heidelberg.de/ns/sarit-transliteration";
-	public static String PREFIX = "sarit";
+	public static String PREFIX = "sarit-slp1";
 	public final static String INCLUSION_DATE = "2016-04-23";
 	public final static String RELEASED_IN_VERSION = "eXist-1.5";
 
