@@ -50,7 +50,7 @@ public class ExistTransliterationModule extends AbstractInternalModule {
 
 	@Override
 	public String getDescription() {
-		return "A module for performing transliteration between various scripts, by using SLP1 as turnover.";
+		return "A module for performing transliteration between various scripts, by using SLP1 as pivotal format.";
 	}
 
 	@Override
